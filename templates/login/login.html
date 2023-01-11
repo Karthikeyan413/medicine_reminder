@@ -1,0 +1,35 @@
+{% extends "login/login_base.html" %}
+
+{% block login_block %}
+<h1>Login</h1>
+{% endblock %}
+
+{% block form_block%}
+<form class="" action="#" method="post">
+  {% csrf_token %}
+
+  <div class="mb-3 row">
+    <label for="username" class="col-sm-2 col-form-label">Username </label>
+    <p class="col-sm-1 col-form-label"> :</p>
+    <div class="col-sm-9">
+      <input id="username" class="form-control input" type="text" name="username" placeholder="Enter Username" required>
+    </div>
+  </div>
+
+  <div class="mb-3 row">
+    <label for="pwd" class="col-sm-2 col-form-label">Password</label>
+    <p class="col-sm-1 col-form-label"> :</p>
+    <div class="col-sm-9">
+      <input id="pwd" class="form-control input" name="pwd" type="password" required>
+    </div>
+  </div>
+  {% if invaliduser %}
+    <div id='invalid' class="form-text">Username or Password incorrect !</div>
+    <br>
+  {% endif %}
+  <div class="mb-3 row submit">
+    <input id="button" type="submit" class="btn btn-outline-primary" name="" value="Login">
+  </div>
+</form>
+<div class="form-text">Don't have an account ? <a href="{% url 'register' %}">Register</a></div>
+{% endblock %}

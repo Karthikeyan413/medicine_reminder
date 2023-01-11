@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+body, html{
+  height: 100%;
+  background-color: #ff8b7a
+}
+h1 {
+  color: #2F2C23;
+}
+.background_img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.background_img img {
+  width: 100%;
+  height: 100%;
+}
+body > .container {
+  position: absolute;
+  top: 30.33%;
+  right: 7%;
+  margin: -25px 0 0 -25px;
+  width: 33.33%;
+}
+.container > .login , .register{
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 50px;
+  padding-bottom: 25px;
+  box-shadow: 2px 2px 20px -5px;
+}
+#invalid {
+  color: #dc3545;
+}
+.title {
+  position: absolute;
+  margin: auto;
+  width: fit-content;
+  top: 10%;
+  left: 42%;
+}
